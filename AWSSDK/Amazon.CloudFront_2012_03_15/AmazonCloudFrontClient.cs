@@ -1540,7 +1540,7 @@ namespace Amazon.CloudFront_2012_03_15
                     request.Abort();
                     throw;
                 }
-            } while (shouldRetry && retries <= config.MaxErrorRetry);
+            } while (shouldRetry && retries <= maxRetries);
 
             return response;
         }
